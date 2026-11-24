@@ -120,25 +120,22 @@
           </div>
         </div>
 
-        <div class="booth-qr-box">
-          <div class="qr-placeholder" id="qrContainer">
-            <!-- Dynamic QR Code: Loads qr_code.png automatically once dropped into assets/images/ -->
-            <img src="assets/images/qr_code.png" alt="Exhibition QR Code" id="liveQrImage" style="display:none; width:100%; height:100%; object-fit:contain; border-radius:8px;" onload="this.style.display='block'; document.getElementById('qrFallbackFrame').style.display='none';">
-            <div class="qr-frame" id="qrFallbackFrame">
-              <svg class="qr-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="7" height="7"></rect>
-                <rect x="14" y="3" width="7" height="7"></rect>
-                <rect x="3" y="14" width="7" height="7"></rect>
-                <rect x="14" y="14" width="3" height="3"></rect>
-                <rect x="18" y="18" width="3" height="3"></rect>
-                <rect x="18" y="14" width="3" height="3"></rect>
-                <rect x="14" y="18" width="3" height="3"></rect>
-              </svg>
-              <span class="qr-label">EXHIBITION QR CODE</span>
-              <small class="qr-hint">[ Scan to View Live Showcase &amp; Download APK ]</small>
+        <div class="booth-qr-box" style="display:flex; flex-direction:row; gap:1.25rem; flex-wrap:wrap; justify-content:center;">
+          <!-- QR Code 1: Showcase Website -->
+          <div style="display:flex; flex-direction:column; align-items:center;">
+            <div class="qr-placeholder" id="qrContainer">
+              <img src="assets/images/qr_code.png" alt="Showcase QR Code" style="width:100%; height:100%; object-fit:contain; border-radius:8px;">
             </div>
+            <span class="qr-caption">1. Website Showcase</span>
           </div>
-          <span class="qr-caption">Share with Panelists &amp; Attendees</span>
+
+          <!-- QR Code 2: Direct APK Download -->
+          <div style="display:flex; flex-direction:column; align-items:center;">
+            <div class="qr-placeholder" style="border-color:var(--emerald-500);">
+              <img src="assets/images/qr_apk.png" alt="APK Download QR Code" style="width:100%; height:100%; object-fit:contain; border-radius:8px;">
+            </div>
+            <span class="qr-caption" style="color:var(--emerald-500);">2. Download APK</span>
+          </div>
         </div>
       </div>
     </div>
@@ -450,14 +447,21 @@
             </a>
           </div>
 
-          <div class="install-steps">
-            <h4>Quick Installation Steps:</h4>
-            <ol>
-              <li>Download <code>EngKanto.apk</code> on your Android smartphone.</li>
-              <li>When prompted, enable <em>"Install from unknown sources"</em> in browser settings.</li>
-              <li>Open the app and grant <strong>Camera</strong> (for AR) and <strong>Location</strong> (for Spirit Radar) permissions.</li>
-              <li>Choose <strong>"Play as Guest"</strong> to start exploring immediately without internet.</li>
-            </ol>
+          <div style="display:flex; gap:2rem; align-items:center; flex-wrap:wrap; margin-top:1.5rem;">
+            <div style="display:flex; flex-direction:column; align-items:center; background:rgba(0,0,0,0.4); padding:1rem; border-radius:12px; border:1.5px dashed var(--emerald-500);">
+              <img src="assets/images/qr_apk.png" alt="Scan to Download APK" style="width:140px; height:auto; border-radius:8px;">
+              <span style="font-size:0.75rem; color:var(--emerald-500); font-weight:700; margin-top:0.4rem; text-align:center;">SCAN TO DOWNLOAD APK<br>(Direct to Phone)</span>
+            </div>
+
+            <div class="install-steps" style="flex:1; min-width:280px;">
+              <h4>Quick Installation Steps:</h4>
+              <ol>
+                <li>Scan the QR code or click the download button to get <code>EngKanto.apk</code>.</li>
+                <li>When prompted, enable <em>"Install from unknown sources"</em> in browser settings.</li>
+                <li>Open the app and grant <strong>Camera</strong> (for AR) and <strong>Location</strong> (for Spirit Radar) permissions.</li>
+                <li>Choose <strong>"Play as Guest"</strong> to start exploring immediately without internet.</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
