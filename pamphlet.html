@@ -223,37 +223,48 @@
       text-align: center;
     }
 
-    .qr-box-bordered {
-      background: #fff;
-      border: 2px dashed #d97706;
+    .qr-card {
+      background: #ffffff;
+      border: 1.5px solid #d97706;
       border-radius: 8px;
-      padding: 0.2in 0.1in;
-      margin: 0.15in auto;
-      width: 85%;
+      padding: 0.08in 0.12in;
+      margin: 0.08in auto;
+      width: 90%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 0.1in;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
 
-    .qr-box-icon {
-      width: 44px;
-      height: 44px;
-      color: #d97706;
+    .qr-card.apk-card {
+      border-color: #059669;
     }
 
-    .qr-box-title {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 7pt;
+    .qr-img {
+      width: 110px;
+      height: auto;
+      max-height: 120px;
+      object-fit: contain;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .qr-card-title {
+      font-family: 'Cinzel', serif;
+      font-size: 8pt;
       font-weight: 800;
       color: #0f172a;
+      margin-top: 0.04in;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
-    .qr-box-sub {
-      font-size: 6pt;
+    .qr-card-sub {
+      font-size: 6.5pt;
       color: #64748b;
-      line-height: 1.2;
+      line-height: 1.25;
+      margin-top: 0.02in;
     }
 
     /* Flap (Outside Left) */
@@ -396,36 +407,18 @@
           <h2>Experience the Game Live</h2>
           <p style="font-size: 7.5pt; color: #64748b;">Scan with your mobile camera to view our digital showcase or install the production APK directly.</p>
 
-          <!-- QR 1: Showcase Link -->
-          <div class="qr-box-bordered">
-            <img src="assets/images/qr_showcase.png" alt="Showcase QR" id="qrShowcaseImg" style="display:none; width:80px; height:auto; object-fit:contain; border-radius:4px;" onload="this.style.display='block'; document.getElementById('qrShowcaseFallback').style.display='none'; document.getElementById('qrShowcaseTitle').innerText='SCAN FOR WEBSITE SHOWCASE';">
-            <div id="qrShowcaseFallback">
-              <svg class="qr-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="7" height="7"></rect>
-                <rect x="14" y="3" width="7" height="7"></rect>
-                <rect x="3" y="14" width="7" height="7"></rect>
-                <rect x="14" y="14" width="3" height="3"></rect>
-                <rect x="18" y="18" width="3" height="3"></rect>
-                <rect x="18" y="14" width="3" height="3"></rect>
-                <rect x="14" y="18" width="3" height="3"></rect>
-              </svg>
-            </div>
-            <span class="qr-box-title" id="qrShowcaseTitle">[ SCAN FOR SHOWCASE ]</span>
-            <span class="qr-box-sub">GitHub Pages Website Showcase<br>Interactive 16-Spirits Codex</span>
+          <!-- QR 1: Website Showcase Link -->
+          <div class="qr-card">
+            <img src="assets/images/qr_showcase.png" alt="Website Showcase QR" class="qr-img">
+            <span class="qr-card-title">Website Showcase</span>
+            <span class="qr-card-sub">Interactive 16-Spirits Codex &amp; Research</span>
           </div>
 
-          <!-- QR 2: APK Download -->
-          <div class="qr-box-bordered" style="border-color: #059669;">
-            <img src="assets/images/qr_apk.png" alt="APK QR" id="qrApkImg" style="display:none; width:80px; height:auto; object-fit:contain; border-radius:4px;" onload="this.style.display='block'; document.getElementById('qrApkFallback').style.display='none'; document.getElementById('qrApkTitle').innerText='SCAN TO DOWNLOAD APK';">
-            <div id="qrApkFallback">
-              <svg class="qr-box-icon" style="color: #059669;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-              </svg>
-            </div>
-            <span class="qr-box-title" id="qrApkTitle">[ SCAN TO DOWNLOAD APK ]</span>
-            <span class="qr-box-sub">Direct APK Download (89.9 MB)<br>Production Release Build v1.0</span>
+          <!-- QR 2: APK Download Link -->
+          <div class="qr-card apk-card">
+            <img src="assets/images/qr_apk.png" alt="APK Download QR" class="qr-img">
+            <span class="qr-card-title" style="color: #059669;">Download APK</span>
+            <span class="qr-card-sub">Direct Android Install (89.9 MB • v1.0)</span>
           </div>
         </div>
 
