@@ -1,0 +1,302 @@
+[
+  {
+    "index": 0,
+    "key": "tikbalang",
+    "name": "Tikbalang",
+    "rarity": "Common",
+    "region": "Luzon (widespread)",
+    "habitat": "Forests & Mountains",
+    "lore": "A tall, gaunt humanoid with the head and hooves of a horse, the Tikbalang lurks in deep forests and lonely mountain trails. It is a trickster that leads travelers astray, making them walk in endless circles no matter how far they go.",
+    "culture": "Folk wisdom says you can break its spell by turning your shirt inside out or politely asking permission to pass. Legend holds that whoever plucks a single golden hair from its mane can tame the Tikbalang as a loyal servant.",
+    "traits": [
+      "Trickster",
+      "Shapeshifter",
+      "Swift",
+      "Nocturnal"
+    ],
+    "heightMeters": "2.30m",
+    "timeCycle": "Nocturnal (Night: 6 PM \u2013 6 AM)",
+    "iconEmoji": "\ud83d\udc34"
+  },
+  {
+    "index": 1,
+    "key": "kapre",
+    "name": "Kapre",
+    "rarity": "Common",
+    "region": "Nationwide",
+    "habitat": "Old Balete & Acacia Trees",
+    "lore": "A towering, dark, hairy giant that dwells in ancient trees, the Kapre is most often pictured perched on a thick branch smoking an enormous tobacco pipe. It can render itself invisible and watches passersby from the shadows.",
+    "culture": "The glow of a floating ember and the heavy smell of tobacco at night are said to signal a Kapre nearby. Stories tell of Kapres who befriend, or even grow fond of, the humans living near their tree.",
+    "traits": [
+      "Giant",
+      "Smoker",
+      "Invisible",
+      "Guardian"
+    ],
+    "heightMeters": "2.90m",
+    "timeCycle": "Nocturnal (Night: 6 PM \u2013 6 AM)",
+    "iconEmoji": "\ud83c\udf33"
+  },
+  {
+    "index": 2,
+    "key": "aswang",
+    "name": "Aswang",
+    "rarity": "Rare",
+    "region": "Visayas (esp. Capiz)",
+    "habitat": "Villages at Night",
+    "lore": "More a category than a single being, the Aswang is a shapeshifting monster that appears human by day and turns predator by night, combining the witch, ghoul, and viscera-eater into one of the most feared figures in Filipino folklore.",
+    "culture": "Communities defended themselves with garlic, salt, and blessed objects. The province of Capiz is so tied to Aswang lore that the stories there form a living part of local identity.",
+    "traits": [
+      "Shapeshifter",
+      "Viscera-eater",
+      "Fears salt & garlic"
+    ],
+    "heightMeters": "1.60m",
+    "timeCycle": "Nocturnal (Night: 6 PM \u2013 6 AM)",
+    "iconEmoji": "\ud83e\udd87"
+  },
+  {
+    "index": 3,
+    "key": "manananggal",
+    "name": "Manananggal",
+    "rarity": "Rare",
+    "region": "Visayas",
+    "habitat": "Night Skies above Villages",
+    "lore": "A self-segmenting horror, the Manananggal detaches its upper torso from its waist, sprouts great bat-like wings, and flies through the night. It preys on sleeping victims, especially the pregnant, with a long thread-like tongue.",
+    "culture": "Its abandoned lower half is its weakness: sprinkling salt, crushed garlic, or ash on it stops the two halves from rejoining, and the creature perishes when the sun rises.",
+    "traits": [
+      "Flight",
+      "Self-segmenting",
+      "Predator",
+      "Nocturnal"
+    ],
+    "heightMeters": "1.75m",
+    "timeCycle": "Nocturnal (Night: 6 PM \u2013 6 AM)",
+    "iconEmoji": "\ud83e\ude78"
+  },
+  {
+    "index": 4,
+    "key": "bakunawa",
+    "name": "Bakunawa",
+    "rarity": "Legendary",
+    "region": "Visayas / Bicol",
+    "habitat": "The Sea & Sky",
+    "lore": "A colossal sea serpent and moon-eating dragon, the Bakunawa rises from the deep to swallow the moon whole. Ancient Filipinos believed an eclipse was the moment the Bakunawa caught its silver prey.",
+    "culture": "To save the moon, people would bang pots, drums, and gongs and shout into the night to frighten the Bakunawa into spitting it back out, a myth that explained the eclipse itself.",
+    "traits": [
+      "Colossal",
+      "Serpentine",
+      "Celestial"
+    ],
+    "heightMeters": "3.20m",
+    "timeCycle": "Nocturnal (Night: 6 PM \u2013 6 AM)",
+    "iconEmoji": "\ud83d\udc09"
+  },
+  {
+    "index": 5,
+    "key": "diwata",
+    "name": "Diwata",
+    "rarity": "Uncommon",
+    "region": "Nationwide",
+    "habitat": "Forests, Mountains, Springs",
+    "lore": "Benevolent nature spirits akin to fairies and minor deities, Diwata guard forests, mountains, and waters. The name itself descends from the Sanskrit 'devata', a trace of pre-colonial cultural exchange.",
+    "culture": "Maria Makiling of Mount Makiling is the most beloved Diwata. People left offerings and treated nature with respect to earn a Diwata's favor and avoid her quiet wrath.",
+    "traits": [
+      "Guardian",
+      "Graceful",
+      "Nature-bound",
+      "Blesses or curses"
+    ],
+    "heightMeters": "1.65m",
+    "timeCycle": "Diurnal (Day: 6 AM \u2013 6 PM)",
+    "iconEmoji": "\u2728"
+  },
+  {
+    "index": 6,
+    "key": "nuno",
+    "name": "Nuno sa Punso",
+    "rarity": "Common",
+    "region": "Nationwide",
+    "habitat": "Anthills & Earth Mounds",
+    "lore": "A small, old, bearded spirit who lives inside anthills and earthen mounds, the Nuno sa Punso is easily offended when its home is disturbed or stepped on.",
+    "culture": "Filipinos still say 'tabi-tabi po' ('excuse me, please') when passing a mound, lest they offend the Nuno and suffer swelling, fever, or strange illness as punishment.",
+    "traits": [
+      "Tiny",
+      "Elder",
+      "Easily angered",
+      "Curse-giver"
+    ],
+    "heightMeters": "0.45m",
+    "timeCycle": "Diurnal (Day: 6 AM \u2013 6 PM)",
+    "iconEmoji": "\ud83d\uddff"
+  },
+  {
+    "index": 7,
+    "key": "tiyanak",
+    "name": "Tiyanak",
+    "rarity": "Uncommon",
+    "region": "Nationwide",
+    "habitat": "Forests & Roadsides",
+    "lore": "A vampiric deceiver, the Tiyanak imitates the cry of an abandoned infant to lure kind-hearted travelers close, then reveals its true monstrous form and attacks.",
+    "culture": "It is often said to be the spirit of an unbaptized or lost infant. As with the Tikbalang, turning your clothes inside out is one folk remedy believed to break its lure.",
+    "traits": [
+      "Deceiver",
+      "Mimic",
+      "Predator"
+    ],
+    "heightMeters": "0.60m",
+    "timeCycle": "Nocturnal (Night: 6 PM \u2013 6 AM)",
+    "iconEmoji": "\ud83d\udc76"
+  },
+  {
+    "index": 8,
+    "key": "engkanto",
+    "name": "Engkanto",
+    "rarity": "Uncommon",
+    "region": "Nationwide",
+    "habitat": "Trees, Seas & Unseen Realms",
+    "lore": "Enchanted environmental spirits, often strikingly beautiful and fair-skinned, Engkanto inhabit nature and a parallel unseen world. The name comes from the Spanish 'encanto', meaning enchantment.",
+    "culture": "Engkanto may bless humans with fortune and love, or punish disrespect with illness. People ask permission before cutting a tree or disturbing a place an Engkanto might call home.",
+    "traits": [
+      "Enchanting",
+      "Dual-natured",
+      "Unseen",
+      "Fateful"
+    ],
+    "heightMeters": "1.75m",
+    "timeCycle": "Diurnal (Day: 6 AM \u2013 6 PM)",
+    "iconEmoji": "\ud83e\udddd"
+  },
+  {
+    "index": 9,
+    "key": "sirena",
+    "name": "Sirena",
+    "rarity": "Uncommon",
+    "region": "Coastal Philippines",
+    "habitat": "Seas, Rivers & Lakes",
+    "lore": "The Philippine mermaid, half-woman and half-fish, whose enchanting song drifts over the water to charm fishermen and sailors into the deep.",
+    "culture": "Sirena are blamed for luring people beneath the waves and belong to a rich family of Philippine water spirits, alongside her male counterpart, the scaly Siyokoy.",
+    "traits": [
+      "Aquatic",
+      "Alluring",
+      "Song-singer"
+    ],
+    "heightMeters": "1.60m",
+    "timeCycle": "Diurnal (Day: 6 AM \u2013 6 PM)",
+    "iconEmoji": "\ud83e\udddc\u200d\u2640\ufe0f"
+  },
+  {
+    "index": 10,
+    "key": "siyokoy",
+    "name": "Siyokoy",
+    "rarity": "Uncommon",
+    "region": "Visayas & Coastal Philippines",
+    "habitat": "Seas & Deep Waters",
+    "lore": "The male counterpart of the Sirena, the Siyokoy is a scaly, fish-like humanoid that dwells in the deep seas. Unlike the alluring Sirena, it is monstrous in appearance, with scales, webbed limbs, and fins, and drags swimmers and fishermen beneath the waves by force.",
+    "culture": "Fishermen feared the Siyokoy most during rough seas and would avoid certain waters believed to be its territory. It is part of a triad of sea beings with the Sirena and the Kataw, reflecting the deep respect and fear Filipino coastal communities held for the ocean.",
+    "traits": [
+      "Aquatic",
+      "Monstrous",
+      "Predator",
+      "Scaly"
+    ],
+    "heightMeters": "1.65m",
+    "timeCycle": "Diurnal (Day: 6 AM \u2013 6 PM)",
+    "iconEmoji": "\ud83e\udd8e"
+  },
+  {
+    "index": 11,
+    "key": "santelmo",
+    "name": "Santelmo",
+    "rarity": "Rare",
+    "region": "Nationwide",
+    "habitat": "Seas, Mountains & Open Fields",
+    "lore": "A mysterious ball of fire or electrical light that drifts through the night sky, especially over water or mountain peaks. Its name comes from 'San Elmo' \u2014 St. Elmo's fire \u2014 and Filipino sailors considered it both an omen and a guide.",
+    "culture": "Sailors and farmers alike feared the Santelmo, believing it to be the wandering soul of a person who died at sea or was struck by lightning. Some accounts say it chases the living, while others claim it leads lost travelers to safety \u2014 a spirit as ambiguous as the flame it wears.",
+    "traits": [
+      "Ethereal",
+      "Luminous",
+      "Unpredictable",
+      "Airborne"
+    ],
+    "heightMeters": "0.55m",
+    "timeCycle": "Nocturnal (Night: 6 PM \u2013 6 AM)",
+    "iconEmoji": "\ud83d\udd25"
+  },
+  {
+    "index": 12,
+    "key": "duwende",
+    "name": "Duwende",
+    "rarity": "Common",
+    "region": "Nationwide",
+    "habitat": "Houses, Gardens & Mounds",
+    "lore": "Tiny, old, goblin-like spirits that live in the corners of old houses, under floors, or inside termite mounds. The name comes from the Spanish 'duende', but Philippine Duwende are distinct: they come in white (kind) and black (mischievous) varieties.",
+    "culture": "White Duwende are believed to bring good fortune to a household that treats them with respect, leaving small offerings of food on the floor. Black Duwende punish rude or noisy people with illness, pinching, or mysterious bruises. Children are taught never to play near mounds at dusk.",
+    "traits": [
+      "Tiny",
+      "Domestic",
+      "Mischievous",
+      "Curse-giver"
+    ],
+    "heightMeters": "0.55m",
+    "timeCycle": "Diurnal (Day: 6 AM \u2013 6 PM)",
+    "iconEmoji": "\ud83c\udf44"
+  },
+  {
+    "index": 13,
+    "key": "batibat",
+    "name": "Batibat",
+    "rarity": "Rare",
+    "region": "Ilocos Region (Luzon)",
+    "habitat": "Old Trees & Wooden Homes",
+    "lore": "A massive, tree-dwelling hag that takes revenge on anyone who cuts down or sleeps near her tree. She sits upon the sleeper's chest and suffocates them in their sleep \u2014 a folkloric explanation for sleep paralysis and sudden unexplained nocturnal death.",
+    "culture": "In Ilocano folklore, the only way to escape the Batibat's crushing weight is to wiggle your toes or bite your thumb until you wake. Homes built from old trees were suspected of housing a displaced Batibat, and mysterious deaths during sleep were attributed to her wrath.",
+    "traits": [
+      "Nocturnal",
+      "Heavy",
+      "Vengeful",
+      "Sleep-bringer"
+    ],
+    "heightMeters": "2.10m",
+    "timeCycle": "Nocturnal (Night: 6 PM \u2013 6 AM)",
+    "iconEmoji": "\ud83d\udc75"
+  },
+  {
+    "index": 14,
+    "key": "white_lady",
+    "name": "White Lady",
+    "rarity": "Uncommon",
+    "region": "Nationwide",
+    "habitat": "Roads, Bridges & Abandoned Buildings",
+    "lore": "A pale, ghostly woman in a flowing white dress, often seen along dark roads, old bridges, or the back seats of cars at night. She is the most widely reported apparition in Philippine urban legend, usually the spirit of a woman who died violently or was wronged in life.",
+    "culture": "The White Lady of Balete Drive in Quezon City is the most famous, said to appear in the rear-view mirrors of drivers passing through at night. Taxi drivers and motorists still avoid the street after dark, and the legend has become a defining piece of modern Filipino supernatural culture.",
+    "traits": [
+      "Ghostly",
+      "Vengeful",
+      "Appears on roads",
+      "Silent"
+    ],
+    "heightMeters": "1.65m",
+    "timeCycle": "Nocturnal (Night: 6 PM \u2013 6 AM)",
+    "iconEmoji": "\ud83d\udc7b"
+  },
+  {
+    "index": 15,
+    "key": "bungisngis",
+    "name": "Bungisngis",
+    "rarity": "Uncommon",
+    "region": "Tagalog Region (Bataan & Laguna)",
+    "habitat": "Forests & Riverbanks",
+    "lore": "A hulking one-eyed giant that is always grinning. Its single eye sits in the middle of its forehead, two long tusks jut from its jaw, and its upper lip is so enormous that it can be thrown back to cover its whole face. It is immensely strong \u2014 said to lift a carabao without effort \u2014 but slow-witted, and its constant laughter gives away its position long before it is seen.",
+    "culture": "Its name comes from the Tagalog 'ngisi', to grin or giggle, and it is best known from the folktale of the three friends, in which the giant's great strength is undone by simple cleverness rather than force. That lesson \u2014 that wit defeats brute power \u2014 is the reason the Bungisngis was told to children, and it remains one of the most distinctly Tagalog monsters in Philippine folklore.",
+    "traits": [
+      "Giant",
+      "One-eyed",
+      "Immensely strong",
+      "Always laughing"
+    ],
+    "heightMeters": "2.70m",
+    "timeCycle": "Diurnal (Day: 6 AM \u2013 6 PM)",
+    "iconEmoji": "\ud83d\udc41\ufe0f"
+  }
+]

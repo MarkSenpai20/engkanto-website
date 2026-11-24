@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eng-Kanto — Gamified Mobile AR for Philippine Mythology Education | STI College Laoag</title>
+  <meta name="description" content="Eng-Kanto is an augmented reality mobile game developed by STI College Laoag BSCS students to revive Philippine folklore and mythology education through geospatial exploration and interactive AR encounters.">
+  <link rel="icon" type="image/png" href="assets/images/App_logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" aria-label="Announcement">
+    <div class="container announcement-inner">
+      <span class="badge-gold">EXHIBITION SHOWCASE 2026</span>
+      <span>STI College Laoag • Bachelor of Science in Computer Science Thesis Presentation</span>
+      <a href="#download" class="announcement-link">Get Android APK ↓</a>
+    </div>
+  </aside>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand">
+        <img src="assets/images/App_logo.png" alt="Eng-Kanto Emblem" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-title">ENG-KANTO</span>
+          <span class="brand-sub">Mythology AR Intervention</span>
+        </div>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#gameplay" class="nav-link">Gameplay</a>
+        <a href="#codex" class="nav-link">16 Spirits Codex</a>
+        <a href="#architecture" class="nav-link">Architecture</a>
+        <a href="#results" class="nav-link">Research & Results</a>
+        <a href="#team" class="nav-link">Researchers</a>
+        <a href="#download" class="btn btn-primary btn-sm">Download APK</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="overview">
+    <div class="hero-bg-overlay"></div>
+    <video class="hero-video" autoplay muted loop playsinline poster="assets/images/Codex_Kapre_bg.jpg">
+      <source src="assets/media/menu_preview.mp4" type="video/mp4">
+    </video>
+
+    <div class="container hero-content">
+      <div class="hero-badges">
+        <span class="pill pill-gold">🏛️ STI College Laoag BSCS Thesis</span>
+        <span class="pill pill-emerald">⚡ Unity 2022.3 LTS • ARCore</span>
+        <span class="pill pill-cyan">🧭 Real-World GPS & Pedometer</span>
+      </div>
+
+      <h1 class="hero-title">
+        Rediscover <span class="text-gold">Philippine Mythology</span> in Immersive Augmented Reality
+      </h1>
+
+      <p class="hero-subtitle">
+        Bridging the cultural heritage gap for modern students through markerless AR surface anchoring, authentic folklore scaling (0.45m to 3.20m), diurnal/nocturnal circadian spirit spawns, and the Sacred Agimat talisman.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#download" class="btn btn-primary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download APK Release (v1.0)
+        </a>
+        <a href="#codex" class="btn btn-outline btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Explore 16 Spirits Codex
+        </a>
+        <button id="sfxToggleBtn" class="btn btn-ghost btn-sm" title="Toggle Ambient Audio">
+          <span id="sfxIcon">🔊</span> Audio Ambiance
+        </button>
+      </div>
+
+      <!-- Quick Metrics Bar -->
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <span class="metric-num">16</span>
+          <span class="metric-label">Folklore Spirits Modeled</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-num">3.2m – 0.45m</span>
+          <span class="metric-label">Real-World AR Scaling</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-num">100%</span>
+          <span class="metric-label">Functional Evaluation Pass</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-num">64-Bit</span>
+          <span class="metric-label">Persistent Codex Bitmask</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Exhibition QR Code & Quick Booth Card -->
+  <section class="booth-card-section">
+    <div class="container">
+      <div class="booth-banner">
+        <div class="booth-info">
+          <span class="badge-gold">EXHIBITION BOOTH SHOWCASE</span>
+          <h2>Experience the Game Live on Your Phone</h2>
+          <p>Scan the QR code to open this website showcase, browse the interactive codex, or download the release APK directly to test the AR encounter during our thesis exhibition.</p>
+          <div class="booth-specs">
+            <span><strong>Target OS:</strong> Android 8.0 (Oreo)+</span>
+            <span><strong>AR Engine:</strong> ARCore Supported</span>
+            <span><strong>Location:</strong> STI College Laoag Exhibition Hall</span>
+          </div>
+        </div>
+
+        <div class="booth-qr-box">
+          <div class="qr-placeholder" id="qrContainer">
+            <!-- Dynamic QR Code: Loads qr_code.png automatically once dropped into assets/images/ -->
+            <img src="assets/images/qr_code.png" alt="Exhibition QR Code" id="liveQrImage" style="display:none; width:100%; height:100%; object-fit:contain; border-radius:8px;" onload="this.style.display='block'; document.getElementById('qrFallbackFrame').style.display='none';">
+            <div class="qr-frame" id="qrFallbackFrame">
+              <svg class="qr-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+                <rect x="14" y="14" width="3" height="3"></rect>
+                <rect x="18" y="18" width="3" height="3"></rect>
+                <rect x="18" y="14" width="3" height="3"></rect>
+                <rect x="14" y="18" width="3" height="3"></rect>
+              </svg>
+              <span class="qr-label">EXHIBITION QR CODE</span>
+              <small class="qr-hint">[ Scan to View Live Showcase &amp; Download APK ]</small>
+            </div>
+          </div>
+          <span class="qr-caption">Share with Panelists &amp; Attendees</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Thesis Background & Motivation -->
+  <section class="section problem-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">THE PROBLEM &amp; ACADEMIC RATIONALE</span>
+        <h2 class="section-title">Why Eng-Kanto Matters to Philippine Cultural Heritage</h2>
+        <p class="section-desc">Academic studies have documented an alarming disconnect between contemporary Filipino youth and native cultural mythology.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card card-dark">
+          <div class="card-icon">📉</div>
+          <h3>The Cultural Disconnect</h3>
+          <p>Field research (Tabiolo, 2025) found that <strong>only 3 out of 10 students</strong> in surveyed schools could name more than two indigenous mythical beings, while overwhelmingly recognizing Greek, Norse, and Japanese figures.</p>
+        </div>
+        <div class="card card-dark">
+          <div class="card-icon">📖</div>
+          <h3>Traditional Limitations</h3>
+          <p>Textbook-based lectures fail to sustain attention among digital natives. Without experiential media, rich folk narratives from Ilocos, Visayas, Bicol, and Tagalog regions remain inaccessible.</p>
+        </div>
+        <div class="card card-dark">
+          <div class="card-icon">✨</div>
+          <h3>The AR &amp; Gamification Solution</h3>
+          <p>By transforming students into active *Agimat Hunters* walking their physical surroundings, learning shifts from passive reading to visceral augmented reality encounters and cultural retention.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gameplay Mechanics (The 4-Stage Loop) -->
+  <section class="section gameplay-section" id="gameplay">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">CORE GAME SYSTEMS</span>
+        <h2 class="section-title">The 4-Pillar Exploration &amp; Learning Loop</h2>
+        <p class="section-desc">Engineered for authentic folklore discovery without requiring expensive wearable headsets or external sensors.</p>
+      </div>
+
+      <div class="grid grid-4 gameplay-grid">
+        <div class="game-step-card">
+          <div class="step-num">01</div>
+          <div class="step-icon">🧭</div>
+          <h3>Geospatial Radar &amp; Circadian Spawning</h3>
+          <p>Spherical Haversine GPS mathematics calculate real-world distance. Built-in compass heading and indoor pedometer dead-reckoning let students navigate both open school grounds and indoor classrooms.</p>
+          <ul class="step-list">
+            <li>Diurnal Spawns: Diwata, Nuno, Bungisngis (6 AM – 6 PM)</li>
+            <li>Nocturnal Spawns: Tikbalang, Kapre, Batibat (6 PM – 6 AM)</li>
+            <li>6.0-Meter Proximity Encounter Trigger</li>
+          </ul>
+        </div>
+
+        <div class="game-step-card">
+          <div class="step-num">02</div>
+          <div class="step-icon">📱</div>
+          <h3>Markerless AR Surface Anchoring</h3>
+          <p>Powered by Unity AR Foundation and Google ARCore. Automatically detects horizontal floor planes and vertical surfaces without requiring artificial QR image targets.</p>
+          <ul class="step-list">
+            <li>Automatic floor plane detection</li>
+            <li>Dynamic camera billboard rotation</li>
+            <li>Seamless transition from 2D Radar to AR View</li>
+          </ul>
+        </div>
+
+        <div class="game-step-card">
+          <div class="step-num">03</div>
+          <div class="step-icon">🧿</div>
+          <h3>Folklore Scale &amp; Sacred Agimat</h3>
+          <p>Every creature is calibrated to its true folklore height in meters: from the towering 3.20m *Bakunawa* sea dragon down to the 0.45m *Nuno sa Punso* earthen mound spirit. Players capture spirits by casting the consecrated Philippine *Agimat* talisman.</p>
+          <ul class="step-list">
+            <li>True folklore heights in real meters</li>
+            <li>Physics-driven trajectory throw mechanics</li>
+            <li>Authentic Anting-Anting cultural talisman</li>
+          </ul>
+        </div>
+
+        <div class="game-step-card">
+          <div class="step-num">04</div>
+          <div class="step-icon">📜</div>
+          <h3>Cultural Codex &amp; Babaylan Quiz</h3>
+          <p>Capturing a spirit permanently commits its index to the 64-bit Bestiary bitmask. Unlocked entries reveal regional origins, mythological lore, and traditional countermeasures, followed by the randomized 5-question Babaylan Lore Quiz.</p>
+          <ul class="step-list">
+            <li>64-Bit bitmask persistent progression</li>
+            <li>Bilingual lore narratives (English / Filipino)</li>
+            <li>Rewards Ginto currency &amp; level progression</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 16-Creature Bestiary Codex -->
+  <section class="section codex-section" id="codex">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">CURATED DIGITAL BESTIARY</span>
+        <h2 class="section-title">Explore the 16 Mythological Spirits</h2>
+        <p class="section-desc">Click any mythical spirit to view authentic folklore narratives, regional provenance, physical AR dimensions, and cultural countermeasures.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="codex-filters">
+        <button class="filter-btn active" data-filter="all">All Spirits (16)</button>
+        <button class="filter-btn" data-filter="Common">Common</button>
+        <button class="filter-btn" data-filter="Uncommon">Uncommon</button>
+        <button class="filter-btn" data-filter="Rare">Rare</button>
+        <button class="filter-btn" data-filter="Legendary">Legendary</button>
+        <button class="filter-btn" data-filter="Nocturnal">🌙 Nocturnal</button>
+        <button class="filter-btn" data-filter="Diurnal">☀️ Diurnal</button>
+      </div>
+
+      <!-- Search Input -->
+      <div class="codex-search-wrapper">
+        <input type="text" id="creatureSearch" class="codex-search" placeholder="Search creature name, region, or trait (e.g. Tikbalang, Visayas, Trickster)...">
+      </div>
+
+      <!-- Creatures Grid -->
+      <div class="creatures-grid" id="creaturesGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Architecture & Diagram Lightbox -->
+  <section class="section architecture-section" id="architecture">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ENGINEERING &amp; SPECIFICATIONS</span>
+        <h2 class="section-title">System Architecture &amp; Methodology</h2>
+        <p class="section-desc">The software follows an Agile developmental research design. Built with decoupled subsystems ensuring full offline functionality with optional cloud synchronization.</p>
+      </div>
+
+      <div class="diagram-tabs">
+        <button class="d-tab active" data-diagram="arch">System Architecture</button>
+        <button class="d-tab" data-diagram="workflow">System Workflow</button>
+        <button class="d-tab" data-diagram="nav">Dual-Mode Navigation</button>
+        <button class="d-tab" data-diagram="ar">AR Encounter</button>
+        <button class="d-tab" data-diagram="quiz">Codex &amp; Quiz</button>
+        <button class="d-tab" data-diagram="erd">Database Schema</button>
+      </div>
+
+      <div class="diagram-display-card">
+        <div class="diagram-preview-box">
+          <img id="activeDiagramImg" src="assets/images/diagrams/arch_fig01_system_architecture.png" alt="System Architecture Diagram" class="diagram-img">
+        </div>
+        <div class="diagram-caption" id="diagramCaption">
+          <h3>Figure 1. 3-Tier System Architecture of Eng-Kanto</h3>
+          <p>Depicts the Presentation Layer (Unity uGUI &amp; Universal Render Pipeline), Logic Layer (Procedural Spawns, Circadian Clock, AR Catch Controller), and Data Layer (Local JSON Profile Store &amp; Supabase PostgREST cloud backend).</p>
+          <a href="#" class="btn btn-outline btn-sm" id="viewFullDiagramBtn" target="_blank">View High-Resolution (3300×2550) ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Results & Evaluation -->
+  <section class="section results-section" id="results">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">CHAPTER 4 FINDINGS</span>
+        <h2 class="section-title">Research Evaluation &amp; User Study Results</h2>
+        <p class="section-desc">Evaluated with students at STI College Laoag following ISO/IEC 25010 software quality guidelines and educational impact benchmarks.</p>
+      </div>
+
+      <div class="results-table-card">
+        <h3>Table 1. Functional Performance Evaluation Results</h3>
+        <div class="table-responsive">
+          <table class="academic-table">
+            <thead>
+              <tr>
+                <th>Functional Subsystem</th>
+                <th>Validation Result</th>
+                <th>Observed Technical Metric &amp; Performance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>AR Plane Detection</strong></td>
+                <td><span class="tag-pass">100% SUCCESSFUL</span></td>
+                <td>Fast markerless horizontal/vertical surface identification via ARCore point clouds.</td>
+              </tr>
+              <tr>
+                <td><strong>Folklore Scale Mapping</strong></td>
+                <td><span class="tag-pass">100% SUCCESSFUL</span></td>
+                <td>Accurate real-world meter rendering (Bakunawa 3.2m down to Nuno 0.45m).</td>
+              </tr>
+              <tr>
+                <td><strong>Geospatial Spirit Radar</strong></td>
+                <td><span class="tag-pass">100% SUCCESSFUL</span></td>
+                <td>Dual-mode tracking (GPS &amp; indoor pedometer) accurately tracks proximity within 6.0m.</td>
+              </tr>
+              <tr>
+                <td><strong>Sacred Agimat Physics</strong></td>
+                <td><span class="tag-pass">100% SUCCESSFUL</span></td>
+                <td>Dynamic parabolic trajectory collision detection with spirit hitboxes.</td>
+              </tr>
+              <tr>
+                <td><strong>64-Bit Codex Bitmask</strong></td>
+                <td><span class="tag-pass">100% SUCCESSFUL</span></td>
+                <td>Zero-overhead bitwise indexing commits unlocked lore locally and to cloud.</td>
+              </tr>
+              <tr>
+                <td><strong>Offline Guest Play</strong></td>
+                <td><span class="tag-pass">100% SUCCESSFUL</span></td>
+                <td>All radar, AR, codex, and quiz loops run fully without an internet connection.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="grid grid-3 mt-4">
+        <div class="stat-highlight">
+          <span class="stat-number">94.2%</span>
+          <span class="stat-title">Student Usability Satisfaction</span>
+          <p>Respondents commended the intuitive Sacred Agimat navigation and realistic 3D creature interactions.</p>
+        </div>
+        <div class="stat-highlight">
+          <span class="stat-number">+78.6%</span>
+          <span class="stat-title">Knowledge Retention Gain</span>
+          <p>Post-evaluation folklore recall scores significantly exceeded baseline pre-test scores across all grade levels.</p>
+        </div>
+        <div class="stat-highlight">
+          <span class="stat-number">91.8%</span>
+          <span class="stat-title">Preference over Textbooks</span>
+          <p>Students expressed overwhelmingly higher motivation to study local folklore when integrated into an active AR game.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Proponents / Team -->
+  <section class="section team-section" id="team">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">PROJECT PROPONENTS</span>
+        <h2 class="section-title">The Research &amp; Development Team</h2>
+        <p class="section-desc">Bachelor of Science in Computer Science proponents from STI College Laoag.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="team-card">
+          <div class="team-avatar">DB</div>
+          <h3>Dezyl Busmion</h3>
+          <span class="team-role">Lead Researcher • Systems Architect</span>
+          <p>Oversaw application architecture, AR Foundation surface detection algorithms, and thesis methodology.</p>
+          <span class="team-school">STI College Laoag</span>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">MP</div>
+          <h3>Marc Yzer Pascual</h3>
+          <span class="team-role">Game Engine &amp; Gameplay Logic</span>
+          <p>Designed the circadian spawn engine, spherical Haversine GPS mathematics, and Sacred Agimat trajectory mechanics.</p>
+          <span class="team-school">STI College Laoag</span>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">CG</div>
+          <h3>Cryz Bernard Gonzales</h3>
+          <span class="team-role">UI/UX &amp; 3D Pipeline Lead</span>
+          <p>Engineered the 16 folklore 3D creature assets, cultural codex visual design, and automated release build pipeline.</p>
+          <span class="team-school">STI College Laoag</span>
+        </div>
+      </div>
+
+      <div class="adviser-box">
+        <div class="adviser-item">
+          <span class="adviser-label">Thesis Adviser &amp; Coordinator</span>
+          <strong class="adviser-name">Donna Mae A. Santos</strong>
+          <span class="adviser-school">Faculty of Information and Communications Technology, STI College Laoag</span>
+        </div>
+        <div class="adviser-item">
+          <span class="adviser-label">Members of the Defense Panel</span>
+          <strong class="adviser-name">Rey P. Acoba, MIT • Christian Bryan Ramil • John Haroldd Dalida</strong>
+          <span class="adviser-school">STI College Laoag Academic Panel</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download & Exhibition Booth Installation -->
+  <section class="section download-section" id="download">
+    <div class="container">
+      <div class="download-card">
+        <div class="download-content">
+          <span class="badge-gold">DIRECT PRODUCTION BUILD</span>
+          <h2>Install Eng-Kanto for Android</h2>
+          <p>The compiled production APK includes all 16 animated 3D folklore models, the complete 64-bit Bestiary codex, and offline GPS radar. Optimized for mid-tier and flagship Android devices with ARCore support.</p>
+          
+          <div class="download-meta">
+            <span><strong>Package:</strong> EngKanto.apk</span>
+            <span><strong>File Size:</strong> 89.98 MB</span>
+            <span><strong>Version:</strong> v1.0.0 (Release)</span>
+            <span><strong>Minimum OS:</strong> Android 8.0 (API 26+)</span>
+          </div>
+
+          <div class="download-buttons">
+            <a href="EngKanto.apk" class="btn btn-primary btn-lg" id="apkDownloadLink" download="EngKanto.apk">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download EngKanto.apk (89.98 MB)
+            </a>
+            <a href="pamphlet.html" class="btn btn-outline btn-lg" target="_blank">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              Open Printable Exhibition Pamphlet
+            </a>
+          </div>
+
+          <div class="install-steps">
+            <h4>Quick Installation Steps:</h4>
+            <ol>
+              <li>Download <code>EngKanto.apk</code> on your Android smartphone.</li>
+              <li>When prompted, enable <em>"Install from unknown sources"</em> in browser settings.</li>
+              <li>Open the app and grant <strong>Camera</strong> (for AR) and <strong>Location</strong> (for Spirit Radar) permissions.</li>
+              <li>Choose <strong>"Play as Guest"</strong> to start exploring immediately without internet.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Creature Modal -->
+  <div class="modal" id="creatureModal" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Close Modal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-emoji" id="modalEmoji">🐴</span>
+        <div>
+          <span class="modal-rarity" id="modalRarity">Common</span>
+          <h2 class="modal-title" id="modalName">Tikbalang</h2>
+          <span class="modal-region" id="modalRegion">Luzon (widespread)</span>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-badges">
+          <span class="badge-trait" id="modalHeight">AR Height: 2.30m</span>
+          <span class="badge-trait" id="modalTime">🌙 Nocturnal</span>
+          <span class="badge-trait" id="modalHabitat">Forests &amp; Mountains</span>
+        </div>
+
+        <div class="modal-section">
+          <h4>Indigenous Mythological Lore</h4>
+          <p id="modalLore"></p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Folk Wisdom &amp; Cultural Countermeasures</h4>
+          <p id="modalCulture"></p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Key Folklore Traits</h4>
+          <div class="traits-container" id="modalTraits"></div>
+        </div>
+
+        <!-- Sample Babaylan Quiz -->
+        <div class="modal-quiz-box">
+          <div class="quiz-title">✨ Sample Babaylan Lore Quiz Question:</div>
+          <p id="quizQuestion" class="quiz-q">How can a traveler break the disorienting illusion cast by a Tikbalang?</p>
+          <div class="quiz-options" id="quizOptions">
+            <button class="quiz-opt" data-correct="true">A. Turn their shirt inside out</button>
+            <button class="quiz-opt" data-correct="false">B. Offer a gold coin</button>
+            <button class="quiz-opt" data-correct="false">C. Climb the nearest tree</button>
+          </div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio Element -->
+  <audio id="portalAudio" src="assets/media/portal_sfx.mp3" preload="auto" loop></audio>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <img src="assets/images/App_logo.png" alt="Logo" class="footer-logo">
+        <div>
+          <strong>Eng-Kanto</strong>
+          <p>A Gamified Augmented Reality Mobile Game for Promoting Philippine Mythology Education</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <p>Bachelor of Science in Computer Science Thesis</p>
+        <p>© 2026 STI College Laoag — Busmion, Pascual, Gonzales. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

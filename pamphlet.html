@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eng-Kanto Exhibition Pamphlet (Print-Ready Tri-Fold Brochure)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: letter landscape;
+      margin: 0.25in;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #f1f5f9;
+      color: #0f172a;
+      line-height: 1.4;
+      font-size: 9.5pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Print Controls Bar (Screen Only) */
+    .no-print-bar {
+      background: #0f172a;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .no-print-bar h1 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #f59e0b;
+      font-family: 'Cinzel', serif;
+    }
+
+    .print-btn {
+      background: #f59e0b;
+      color: #000;
+      border: none;
+      padding: 0.5rem 1.25rem;
+      font-size: 0.85rem;
+      font-weight: 800;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.2s;
+    }
+
+    .print-btn:hover {
+      background: #d97706;
+    }
+
+    @media print {
+      .no-print-bar {
+        display: none !important;
+      }
+      body {
+        background: #fff;
+      }
+      .sheet {
+        page-break-after: always;
+        box-shadow: none !important;
+        margin: 0 !important;
+      }
+    }
+
+    /* Sheet layout (Letter Landscape: 11in x 8.5in) */
+    .sheet-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding: 1.5rem;
+    }
+
+    .sheet {
+      width: 10.5in;
+      height: 8.0in;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #cbd5e1;
+    }
+
+    /* Column Panels */
+    .panel {
+      padding: 0.55in 0.45in;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      border-right: 1px dashed #cbd5e1;
+    }
+
+    .panel:last-child {
+      border-right: none;
+    }
+
+    /* Typography */
+    h2, h3, h4 {
+      font-family: 'Cinzel', serif;
+      color: #0f172a;
+      line-height: 1.2;
+    }
+
+    h2 { font-size: 14pt; margin-bottom: 0.25rem; }
+    h3 { font-size: 11pt; margin-bottom: 0.2rem; }
+    h4 { font-size: 9pt; margin-bottom: 0.15rem; text-transform: uppercase; letter-spacing: 0.04em; }
+
+    .tag-line {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 6.5pt;
+      font-weight: 700;
+      color: #059669;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #f59e0b;
+      font-size: 6.5pt;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+    }
+
+    /* Panel Stylings */
+    /* Cover Panel (Outside Right) */
+    .panel-cover {
+      background: linear-gradient(145deg, #0f291e, #091711);
+      color: #fff;
+      text-align: center;
+      border-left: 3px solid #f59e0b;
+    }
+
+    .panel-cover h2, .panel-cover h3, .panel-cover h4 {
+      color: #fff;
+    }
+
+    .cover-header {
+      border-bottom: 1px solid rgba(245, 158, 11, 0.4);
+      padding-bottom: 0.4in;
+    }
+
+    .cover-inst {
+      font-size: 7.5pt;
+      color: #f59e0b;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .cover-prog {
+      font-size: 6.5pt;
+      color: #94a3b8;
+    }
+
+    .cover-logo-wrap {
+      margin: 0.5in 0 0.3in;
+    }
+
+    .cover-logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 16px;
+      border: 2px solid #f59e0b;
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+    }
+
+    .cover-title {
+      font-size: 20pt;
+      font-weight: 900;
+      color: #fbbf24;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.15in;
+    }
+
+    .cover-desc {
+      font-size: 8pt;
+      color: #e2e8f0;
+      line-height: 1.45;
+      padding: 0 0.1in;
+    }
+
+    .cover-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 0.25in;
+      font-size: 7pt;
+      color: #94a3b8;
+    }
+
+    /* Back Cover (Outside Center) */
+    .panel-back {
+      background: #f8fafc;
+      text-align: center;
+    }
+
+    .qr-box-bordered {
+      background: #fff;
+      border: 2px dashed #d97706;
+      border-radius: 8px;
+      padding: 0.2in 0.1in;
+      margin: 0.15in auto;
+      width: 85%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.1in;
+    }
+
+    .qr-box-icon {
+      width: 44px;
+      height: 44px;
+      color: #d97706;
+    }
+
+    .qr-box-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7pt;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .qr-box-sub {
+      font-size: 6pt;
+      color: #64748b;
+      line-height: 1.2;
+    }
+
+    /* Flap (Outside Left) */
+    .panel-flap {
+      background: #ffffff;
+    }
+
+    /* Feature Cards inside panels */
+    .feature-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 3px solid #059669;
+      border-radius: 4px;
+      padding: 0.12in 0.15in;
+      margin-bottom: 0.12in;
+    }
+
+    .feature-card h4 {
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .feature-card p {
+      font-size: 7.5pt;
+      color: #475569;
+      margin-top: 0.05in;
+    }
+
+    /* Creature Height Table */
+    .creature-mini-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7pt;
+      margin-top: 0.1in;
+    }
+
+    .creature-mini-table th {
+      background: #0f172a;
+      color: #fff;
+      padding: 2px 4px;
+      text-align: left;
+      font-family: 'Cinzel', serif;
+    }
+
+    .creature-mini-table td {
+      padding: 2px 4px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .creature-mini-table tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    .height-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: #b45309;
+    }
+
+    /* Team Grid */
+    .team-mini-list {
+      list-style: none;
+      font-size: 7pt;
+      margin-top: 0.05in;
+    }
+
+    .team-mini-list li {
+      margin-bottom: 0.06in;
+      padding-bottom: 0.04in;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .team-mini-list strong {
+      display: block;
+      color: #0f172a;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Top Bar with Print Button -->
+  <div class="no-print-bar">
+    <div>
+      <h1>Eng-Kanto Exhibition Pamphlet (Tri-Fold Brochure)</h1>
+      <small style="color: #cbd5e1;">Print on Letter Landscape (11" x 8.5") • Set Print Margins to "None" or "Minimum"</small>
+    </div>
+    <button class="print-btn" onclick="window.print()">
+      🖨️ Print / Save as PDF (Ctrl + P)
+    </button>
+  </div>
+
+  <div class="sheet-wrapper">
+
+    <!-- ========================================== -->
+    <!-- SHEET 1: OUTSIDE SPREAD                    -->
+    <!-- (Left: Inside Flap | Center: Back Cover | Right: Front Cover) -->
+    <!-- ========================================== -->
+    <div class="sheet">
+
+      <!-- Panel 1: Inside Flap (Academic Rationale & Specifications) -->
+      <div class="panel panel-flap">
+        <div>
+          <span class="tag-line">Research Background</span>
+          <h2>Cultural Heritage Crisis</h2>
+          <p style="font-size: 7.8pt; color: #475569; margin: 0.1in 0;">
+            Studies reveal a sharp decline in local cultural awareness among Filipino youth. Tabiolo (2025) reported that only 3 in 10 students can identify native folklore creatures, while overwhelmingly recognizing Greek, Norse, and Japanese mythological icons.
+          </p>
+
+          <div class="feature-card">
+            <h4>🎯 Thesis Objective</h4>
+            <p>Design, develop, and evaluate a mobile AR game that reconnects students with indigenous Philippine folklore through markerless exploration.</p>
+          </div>
+
+          <div class="feature-card" style="border-left-color: #f59e0b;">
+            <h4>⚙️ System Requirements</h4>
+            <p><strong>Platform:</strong> Android 8.0+ (Oreo)<br>
+            <strong>AR Stack:</strong> AR Foundation &amp; ARCore<br>
+            <strong>Sensors:</strong> Camera, GPS, Compass<br>
+            <strong>Storage:</strong> ~110 MB free space</p>
+          </div>
+
+          <div class="feature-card" style="border-left-color: #2563eb;">
+            <h4>📊 Validation Results</h4>
+            <p><strong>Functional Pass:</strong> 100% across all 7 core modules.<br>
+            <strong>Learning Impact:</strong> +78.6% knowledge recall gain.</p>
+          </div>
+        </div>
+
+        <div style="font-size: 6.8pt; color: #64748b; border-top: 1px solid #e2e8f0; padding-top: 0.1in;">
+          <strong>STI College Laoag</strong> • College of Information and Communications Technology • Academic Year 2025–2026
+        </div>
+      </div>
+
+      <!-- Panel 2: Back Cover (QR Codes & Exhibition Access) -->
+      <div class="panel panel-back">
+        <div>
+          <span class="tag-line">Exhibition Booth Access</span>
+          <h2>Experience the Game Live</h2>
+          <p style="font-size: 7.5pt; color: #64748b;">Scan with your mobile camera to view our digital showcase or install the production APK directly.</p>
+
+          <!-- QR Placeholder 1: Showcase Link -->
+          <div class="qr-box-bordered">
+            <img src="assets/images/qr_showcase.png" alt="Showcase QR" id="qrShowcaseImg" style="display:none; width:70px; height:70px; object-fit:contain;" onload="this.style.display='block'; document.getElementById('qrShowcaseFallback').style.display='none';">
+            <div id="qrShowcaseFallback">
+              <svg class="qr-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+                <rect x="14" y="14" width="3" height="3"></rect>
+                <rect x="18" y="18" width="3" height="3"></rect>
+                <rect x="18" y="14" width="3" height="3"></rect>
+                <rect x="14" y="18" width="3" height="3"></rect>
+              </svg>
+            </div>
+            <span class="qr-box-title">[ INSERT QR CODE 1 HERE ]</span>
+            <span class="qr-box-sub">GitHub Pages Website Showcase<br>Interactive 16-Spirits Codex</span>
+          </div>
+
+          <!-- QR Placeholder 2: APK Download -->
+          <div class="qr-box-bordered" style="border-color: #059669;">
+            <img src="assets/images/qr_apk.png" alt="APK QR" id="qrApkImg" style="display:none; width:70px; height:70px; object-fit:contain;" onload="this.style.display='block'; document.getElementById('qrApkFallback').style.display='none';">
+            <div id="qrApkFallback">
+              <svg class="qr-box-icon" style="color: #059669;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </div>
+            <span class="qr-box-title">[ INSERT QR CODE 2 HERE ]</span>
+            <span class="qr-box-sub">Direct APK Download (89.9 MB)<br>Production Release Build v1.0</span>
+          </div>
+        </div>
+
+        <div>
+          <span class="tag-line">Research Proponents</span>
+          <ul class="team-mini-list">
+            <li><strong>Dezyl Busmion</strong> Lead Researcher &amp; Systems Architect</li>
+            <li><strong>Marc Yzer Pascual</strong> Game Engine &amp; Logic Lead</li>
+            <li><strong>Cryz Bernard Gonzales</strong> UI/UX &amp; 3D Pipeline Lead</li>
+          </ul>
+          <div style="font-size: 6.5pt; color: #64748b; margin-top: 0.05in;">
+            <strong>Adviser:</strong> Donna Mae A. Santos<br>
+            <strong>Panel:</strong> Rey P. Acoba, MIT • Christian Bryan Ramil • John Haroldd Dalida
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 3: Front Cover (Title, Logo, & Exhibition Tagline) -->
+      <div class="panel panel-cover">
+        <div class="cover-header">
+          <div class="cover-inst">STI COLLEGE LAOAG</div>
+          <div class="cover-prog">Bachelor of Science in Computer Science</div>
+        </div>
+
+        <div>
+          <div class="cover-logo-wrap">
+            <img src="assets/images/App_logo.png" alt="Eng-Kanto" class="cover-logo">
+          </div>
+          <h1 class="cover-title">ENG-KANTO</h1>
+          <span class="badge-pill" style="margin-bottom: 0.15in;">AR MOBILE INTERVENTION</span>
+          <p class="cover-desc">
+            A Gamified Augmented Reality Mobile Game for Promoting Philippine Mythology Education
+          </p>
+        </div>
+
+        <div class="cover-footer">
+          <div><strong>EXHIBITION SHOWCASE 2026</strong></div>
+          <div style="font-size: 6.5pt; color: #cbd5e1; margin-top: 0.04in;">
+            Markerless AR • Geospatial Radar • 16 Mythological Spirits • Babaylan Lore Codex
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- SHEET 2: INSIDE SPREAD                     -->
+    <!-- (Left: Radar & Nav | Center: 16 Creatures | Right: Agimat & Codex) -->
+    <!-- ========================================== -->
+    <div class="sheet">
+
+      <!-- Panel 4: Inside Left (Geospatial Radar & Circadian Loop) -->
+      <div class="panel">
+        <div>
+          <span class="tag-line">Pillar 1: Exploration</span>
+          <h2>Geospatial Radar &amp; Circadian Cycle</h2>
+          <p style="font-size: 7.5pt; color: #475569; margin: 0.08in 0;">
+            Real-world outdoor GPS is seamlessly blended with an indoor dead-reckoning pedometer and digital compass rose, enabling students to explore classrooms, campus quads, and sports facilities.
+          </p>
+
+          <div class="feature-card">
+            <h4>🧭 Haversine GPS Distance</h4>
+            <p>Calculates spherical distances between the player's mobile coordinates and spirit spawn nodes within a 45m perimeter.</p>
+          </div>
+
+          <div class="feature-card" style="border-left-color: #6366f1;">
+            <h4>🌙 Circadian Cycle Engine</h4>
+            <p>Spawns dynamically adapt to real-world time (<code>DateTime.Now.Hour</code>):<br>
+            • <strong>Diurnal (Day: 6 AM–6 PM):</strong> Diwata, Nuno, Bungisngis.<br>
+            • <strong>Nocturnal (Night: 6 PM–6 AM):</strong> Tikbalang, Kapre, Batibat, Aswang.</p>
+          </div>
+
+          <div class="feature-card" style="border-left-color: #f59e0b;">
+            <h4>⚡ 6-Meter Proximity Alert</h4>
+            <p>Approaching within 6.0m triggers golden haptic vibration, transitioning seamlessly into the AR encounter.</p>
+          </div>
+        </div>
+
+        <div style="font-size: 6.8pt; color: #64748b; border-top: 1px solid #e2e8f0; padding-top: 0.08in;">
+          <strong>Pillar 2: Surface Detection</strong> • ARCore horizontal &amp; vertical plane raycasting without artificial paper markers.
+        </div>
+      </div>
+
+      <!-- Panel 5: Inside Center (16 Creatures Folklore Height Chart) -->
+      <div class="panel" style="background: #ffffff;">
+        <div>
+          <span class="tag-line">Folklore Dimension Scaling</span>
+          <h2>The 16 Mythic Spirits</h2>
+          <p style="font-size: 7.2pt; color: #475569; margin: 0.06in 0;">
+            Unlike generic mobile games, every 3D creature is calibrated to its authentic Philippine folklore height in real-world meters:
+          </p>
+
+          <table class="creature-mini-table">
+            <thead>
+              <tr>
+                <th>Creature</th>
+                <th>Classification</th>
+                <th>AR Height</th>
+                <th>Region</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Bakunawa</strong></td><td>Celestial Sea Dragon</td><td class="height-pill">3.20m</td><td>Visayas</td></tr>
+              <tr><td><strong>Kapre</strong></td><td>Balete Smoking Giant</td><td class="height-pill">2.90m</td><td>Nationwide</td></tr>
+              <tr><td><strong>Bungisngis</strong></td><td>One-Eyed Cyclops</td><td class="height-pill">2.70m</td><td>Tagalog</td></tr>
+              <tr><td><strong>Tikbalang</strong></td><td>Horse-Headed Trickster</td><td class="height-pill">2.30m</td><td>Luzon</td></tr>
+              <tr><td><strong>Batibat</strong></td><td>Nightmare Tree Hag</td><td class="height-pill">2.10m</td><td>Ilocos</td></tr>
+              <tr><td><strong>Manananggal</strong></td><td>Winged Torso Hunter</td><td class="height-pill">1.75m</td><td>Visayas</td></tr>
+              <tr><td><strong>Engkanto</strong></td><td>Noble Forest Spirit</td><td class="height-pill">1.75m</td><td>Nationwide</td></tr>
+              <tr><td><strong>Diwata</strong></td><td>Nature Guardian</td><td class="height-pill">1.65m</td><td>Nationwide</td></tr>
+              <tr><td><strong>White Lady</strong></td><td>Roadside Apparition</td><td class="height-pill">1.65m</td><td>Nationwide</td></tr>
+              <tr><td><strong>Aswang</strong></td><td>Nocturnal Shapeshifter</td><td class="height-pill">1.60m</td><td>Capiz</td></tr>
+              <tr><td><strong>Sirena</strong></td><td>Aquatic Maiden</td><td class="height-pill">1.60m</td><td>Coasts</td></tr>
+              <tr><td><strong>Siyokoy</strong></td><td>Predatory Scaled Beast</td><td class="height-pill">1.65m</td><td>Visayas</td></tr>
+              <tr><td><strong>Tiyanak</strong></td><td>Demon Infant Mimic</td><td class="height-pill">0.60m</td><td>Nationwide</td></tr>
+              <tr><td><strong>Santelmo</strong></td><td>Floating Ghost Fire</td><td class="height-pill">0.55m</td><td>Nationwide</td></tr>
+              <tr><td><strong>Duwende</strong></td><td>Earthen Goblin</td><td class="height-pill">0.55m</td><td>Nationwide</td></tr>
+              <tr><td><strong>Nuno</strong></td><td>Anthill Mound Elder</td><td class="height-pill">0.45m</td><td>Nationwide</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="font-size: 6.8pt; color: #b45309; background: #fef3c7; padding: 4px 6px; border-radius: 4px; border: 1px solid #fde68a;">
+          💡 <strong>Authentic Scale:</strong> Stood side-by-side in AR, a 2.9m Kapre looms over a 0.45m Nuno, reinforcing authentic oral storytelling.
+        </div>
+      </div>
+
+      <!-- Panel 6: Inside Right (Sacred Agimat & Babaylan Codex Quiz) -->
+      <div class="panel">
+        <div>
+          <span class="tag-line">Pillar 3 &amp; 4: Capture &amp; Codex</span>
+          <h2>Sacred Agimat &amp; Babaylan Quiz</h2>
+          <p style="font-size: 7.5pt; color: #475569; margin: 0.08in 0;">
+            Foreign capturing balls are replaced by the consecrated Philippine *Anting-Anting* talisman. Capturing commits the spirit to the 64-bit codex bitmask.
+          </p>
+
+          <div class="feature-card" style="border-left-color: #f59e0b;">
+            <h4>🧿 Sacred Agimat Physics</h4>
+            <p>Players throw parabolic agimat talismans calculated with real-world gravity and collision hitboxes.</p>
+          </div>
+
+          <div class="feature-card" style="border-left-color: #059669;">
+            <h4>📜 Indigenous Lore Codex</h4>
+            <p>Unlocked entries display cultural narratives, regional habitats, and traditional countermeasures (e.g. turning shirts inside out for Tikbalang).</p>
+          </div>
+
+          <div class="feature-card" style="border-left-color: #dc2626;">
+            <h4>✨ Babaylan Lore Quiz</h4>
+            <p>5-Question randomized cultural quiz tests lore retention. Scoring 60%+ awards bonus EXP, Ginto currency, and achievement badges.</p>
+          </div>
+        </div>
+
+        <div style="background: #0f172a; color: #fff; padding: 0.08in 0.1in; border-radius: 4px; font-size: 6.8pt;">
+          <span style="color: #f59e0b; font-weight: 800;">OFFLINE-FIRST DESIGN:</span>
+          Full gameplay loop runs with zero internet connection. Optional Supabase cloud account syncs progress when online.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
